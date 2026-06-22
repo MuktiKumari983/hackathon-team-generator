@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
+
 const domainData = {
   ai: {
     label: "Artificial Intelligence & Data Science",
@@ -26,6 +26,7 @@ const domainData = {
     slogans: ["Orchestrating high-availability microservices worldwide.", "Seamless scaling across decentralized instances.", "Deploying high-frequency throughput across the fabric.", "Zero downtime, total global persistence."]
   }
 };
+
 const brandPersonalities = [
   { id: "prof-trust", label: "Professional & Trustworthy", letterSpacing: "1", strokeWidth: "3.5" },
   { id: "mod-innov", label: "Modern & Innovative", letterSpacing: "2", strokeWidth: "2" },
@@ -34,6 +35,7 @@ const brandPersonalities = [
   { id: "pow-bold", label: "Powerful & Bold", letterSpacing: "-1", strokeWidth: "6" },
   { id: "friend-simp", label: "Friendly & Simple", letterSpacing: "3", strokeWidth: "3" }
 ];
+
 const logoStyles = [
   { id: "minimalist", label: "Minimalist (Flat Design, Clean Design, Outline Style)" },
   { id: "modern-style", label: "Modern (Geometric, Abstract, Gradient Design, Glassmorphism)" },
@@ -42,6 +44,7 @@ const logoStyles = [
   { id: "traditional", label: "Traditional (Vintage, Retro, Heritage)" },
   { id: "artistic", label: "Artistic (Watercolor, Brush stroke, Hand-drawn, 3D illustration)" }
 ];
+
 const colorPalettes = [
   { id: "bw-mono", label: "Minimal: Black & White Monochrome", g1: "#000000", g2: "#64748b", g3: "#ffffff", bg: "#ffffff", text: "#000000" },
   { id: "charcoal-w", label: "Minimal: Charcoal Gray + White", g1: "#334155", g2: "#64748b", g3: "#cbd5e1", bg: "#ffffff", text: "#1e293b" },
@@ -62,6 +65,7 @@ const colorPalettes = [
   { id: "crim-w", label: "Bold: Crimson + White", g1: "#dc2626", g2: "#991b1b", g3: "#ffffff", bg: "#0c0206", text: "#fecdd3" },
   { id: "hotpink-b", label: "Bold: Hot Pink + Black", g1: "#ec4899", g2: "#db2777", g3: "#000000", bg: "#14040a", text: "#fdf2f8" }
 ];
+
 const colorMoods = [
   { id: "corp-mood", label: "Professional (Serious, Corporate)", opacity: "1.0", mixBlend: "normal" },
   { id: "tech-mood", label: "Technology (Advanced, Cybernetic, Smart)", opacity: "0.95", mixBlend: "screen" },
@@ -72,6 +76,7 @@ const colorMoods = [
   { id: "human-mood", label: "Emotional & Human (Warm, Welcoming)", opacity: "0.95", mixBlend: "overlay" },
   { id: "mystery-mood", label: "Mysterious & Dark (Dramatic, Elite)", opacity: "0.7", mixBlend: "difference" }
 ];
+
 const logoLayouts = [
   { id: "wordmark", label: "Wordmark (Full Brand Name)" },
   { id: "lettermark", label: "Lettermark (Initials Template)" },
@@ -80,6 +85,7 @@ const logoLayouts = [
   { id: "combination", label: "Combination: Icon + Text (Above/Beside/Inside)" },
   { id: "emblem", label: "Emblem: Circular badge / Shield / Seal / Crest" }
 ];
+
 const iconIdeas = [
   { id: "code", label: "Tech: Code Brackets </>, Terminal Window", path: "M9.4,16.6L4.8,12l4.6-4.6L8,6l-6,6l6,6L9.4,16.6z M14.6,16.6l4.6-4.6l-4.6-4.6L16,6l6,6l-6,6L14.6,16.6z" },
   { id: "circuit", label: "Tech: Circuit Lines, AI Brain, Neural Network", path: "M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2zm1,17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45,12.9,13,13.5,13,15h-2v-.5c0-1.1,.45-2.1,1.17-2.83l1.24-1.26c.37-.36,.59-.86,.59-1.41,0-1.1-.9-2-2-2s-2,.9-2,2H7c0-2.76,2.24-5,5-5s5,2.24,5,5c0,1.04-.42,1.99-1.07,2.75z" },
@@ -88,12 +94,14 @@ const iconIdeas = [
   { id: "lightning", label: "Strength: Lightning Bolt, Lion, Eagle", path: "M11.5,2H5L3,13H9L7,22L18,10H12L11.5,2Z" },
   { id: "creative-spark", label: "Creative: Spark, Flame, Brush, Camera", path: "M12,2L14.8,8.5L22,9.2L16.5,14L18.2,21L12,17.3L5.8,21L7.5,14L2,9.2L9.2,8.5L12,2Z" }
 ];
+
 const typographyStyles = [
   { id: "modern-sans", label: "Modern: Sans-serif / Geometric / Tech / Futuristic Font", font: 'system-ui, -apple-system, sans-serif', weight: '900', transform: 'uppercase' },
   { id: "prof-bold", label: "Professional: Bold / Clean Structural Font", font: '"Arial Black", Gadget, sans-serif', weight: '800', transform: 'none' },
   { id: "luxury-serif", label: "Luxury: Serif / Elegant Thin Premium Lettering", font: 'Cinzel, Garamond, "Times New Roman", serif', weight: '300', transform: 'uppercase' },
   { id: "creative-brush", label: "Creative: Handwritten / Custom Typography", font: '"Brush Script MT", "Comic Sans MS", cursive', weight: '700', transform: 'none' }
 ];
+
 const geometricShapes = [
   { id: "circle", label: "Basic Geometry: Circle / Oval Frame" },
   { id: "square", label: "Basic Geometry: Square / Rectangle Template" },
@@ -108,21 +116,25 @@ const geometricShapes = [
   { id: "neural-net", label: "Tech & AI: Neural Network Frame" },
   { id: "ai-eye", label: "Tech & AI: Data Nodes Connections" }
 ];
+
 const visualEffects = [
   { id: "modern-fx", label: "Modern Effects: Gradient, Depth, Glassmorphism" },
   { id: "premium-fx", label: "Premium Effects: Gold Foil, Silver Embossed Look" },
   { id: "futuristic-fx", label: "Futuristic Effects: Neon Glow, Holographic Rays" }
 ];
+
 const logoCompositions = [
   { id: "symmetrical", label: "Symmetrical / Centered Alignment" },
   { id: "asymmetrical", label: "Asymmetrical / Dynamic Shifts" },
   { id: "horizontal", label: "Horizontal / Responsive Matrix Layout" }
 ];
+
 const backgroundPreferences = [
   { id: "dark-theme", label: "Dark Theme / Pitch Dark Canvas" },
   { id: "light-theme", label: "Light Theme / Pure Crisp Clean Canvas" },
   { id: "gradient-bg", label: "Dynamic Chromatic Mesh Gradient Field" }
 ];
+
 export default function App() {
   const [domain, setDomain] = useState("webdev");
   const [teamName, setTeamName] = useState("Error Array");
@@ -139,6 +151,7 @@ export default function App() {
   const [effect, setEffect] = useState("futuristic-fx");
   const [composition, setComposition] = useState("symmetrical");
   const [bgPref, setBgPref] = useState("dark-theme");
+
   const runVectorGeneration = () => {
     const data = domainData[domain];
     const p = data.prefixes[Math.floor(Math.random() * data.prefixes.length)];
@@ -148,6 +161,7 @@ export default function App() {
     setSlogan(sl);
     setInitials((p[0] + s[0]).toUpperCase());
   };
+
   const downloadMasterSVG = () => {
     const svg = document.getElementById("master-branding-canvas");
     const xml = new XMLSerializer().serializeToString(svg);
@@ -158,29 +172,35 @@ export default function App() {
     link.download = `${teamName.toLowerCase().replace(/\s+/g, '-')}-identity-asset.svg`;
     link.click();
   };
+
   const activeFontConfig = typographyStyles.find(t => t.id === typography) || typographyStyles[0];
   const activePersonality = brandPersonalities.find(p => p.id === personality) || brandPersonalities[0];
   const activeMood = colorMoods.find(m => m.id === mood) || colorMoods[0];
   const canvasBgColor = bgPref === "dark-theme" ? "#07070a" : bgPref === "light-theme" ? "#ffffff" : "url(#bg-gradient-mesh)";
+
   const getFillGradient = () => {
     if (style === "premium-style" || effect === "premium-fx") return "url(#premium-gold-grad)";
     if (style === "minimalist") return "none";
     return "url(#master-checklist-grad)";
   };
+
   const getStrokeGradient = () => {
     if (style === "premium-style") return "url(#premium-gold-grad)";
     return "url(#master-checklist-grad)";
   };
+
   const getStrokeDashArray = () => {
     if (style === "futuristic-style") return "8,4";
     if (style === "traditional") return "4,4";
     return "none";
   };
+
   const getMoodSkewTransform = () => {
     if (mood === "energy-mood") return "skewX(-6)";
     if (mood === "creat-mood") return "rotate(3 160 150)";
     return "";
   };
+
   return (
     <div className="min-h-screen bg-[#030306] text-slate-300 p-4 lg:p-8 font-sans antialiased selection:bg-purple-500 selection:text-white">
   
@@ -194,6 +214,7 @@ export default function App() {
           <p className="text-xs text-slate-500 font-mono">Instant Export Suite</p>
         </div>
       </header>
+
       <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* COMPONENT INTERACTION CONTROL INDEX */}
         <div className="lg:col-span-5 bg-slate-950/80 border border-slate-900 p-6 rounded-2xl space-y-5 max-h-[820px] overflow-y-auto pr-2 scrollbar-thin">
@@ -310,6 +331,7 @@ export default function App() {
             ✦ Compile Advanced Vector Profile
           </button>
         </div>
+
         {/* DISPLAY MODULE */}
         <div className="lg:col-span-7 bg-[#050508] border border-slate-900 rounded-3xl p-4 sm:p-8 flex flex-col items-center justify-center min-h-[620px] relative overflow-hidden">
           <div className="p-8 rounded-2xl transition-all duration-300 border border-slate-900" style={{ backgroundColor: canvasBgColor }}>
@@ -425,147 +447,34 @@ export default function App() {
           <button onClick={downloadMasterSVG} className="mt-6 px-8 py-2.5 bg-slate-950 hover:bg-slate-900 border border-slate-800 text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-slate-400 hover:text-white transition-all rounded-full">
              Download Logo SVG
           </button>
-        </div>
-      </main>
-    </div>
-  );
-}
-{/* ADD THESE FIELDS FOR MANDATORY REQUIREMENTS */}
-          <div className="mt-8 flex flex-col items-center gap-3 w-full max-w-[240px]">
-            <input type="text" placeholder="Mukti Kumari" className="w-full bg-transparent border-b border-slate-800 text-center text-[10px] text-slate-500 p-2 outline-none uppercase tracking-wider" />
-            <input type="email" placeholder="kumarimukti789@gmail.com" className="w-full bg-transparent border-b border-slate-800 text-center text-[10px] text-slate-500 p-2 outline-none uppercase tracking-wider" />
+          
+          {/* MANDATORY: Name and Email - Static display */}
+          <div className="mt-8 flex flex-col items-center gap-1 w-full max-w-[240px]">
+            <p className="text-sm font-bold text-slate-200">Mukti Kumari</p>
+            <p className="text-xs text-slate-400 font-mono">kumarimukti789@gmail.com</p>
           </div>
 
-          {/* ADD THIS MANDATORY LINK */}
+          {/* MANDATORY: Built for Digital Heroes Link */}
           <a 
             href="https://digitalheroesco.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="mt-6 text-[10px] text-cyan-700 hover:text-cyan-400 font-mono uppercase tracking-widest transition-colors"
+            className="mt-6 inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white text-xs font-bold uppercase tracking-widest rounded-lg transition-all shadow-lg hover:shadow-cyan-500/25"
           >
             Built for Digital Heroes
           </a>
-=======
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      </main>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Footer with additional info */}
+      <footer className="max-w-7xl mx-auto mt-8 pt-6 border-t border-slate-900 text-center">
+        <p className="text-[10px] text-slate-600 font-mono">
+          Created by Mukti Kumari · kumarimukti789@gmail.com · 
+          <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-400 ml-1">
+            Built for Digital Heroes
+          </a>
+        </p>
+      </footer>
+    </div>
+  );
 }
-
-export default App
->>>>>>> a2d606ea941bab07c8a96e5e72e01cfe69b9c02d

@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "hackathon-team-generator",
-=======
-  "name": "hacktag",
->>>>>>> a2d606ea941bab07c8a96e5e72e01cfe69b9c02d
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,31 +10,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-<<<<<<< HEAD
-    "@tailwindcss/postcss": "^4.3.1",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "autoprefixer": "^10.5.0",
-=======
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
->>>>>>> a2d606ea941bab07c8a96e5e72e01cfe69b9c02d
-    "eslint": "^10.3.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.6.0",
-<<<<<<< HEAD
-    "postcss": "^8.5.15",
-    "tailwindcss": "^4.3.1",
-=======
->>>>>>> a2d606ea941bab07c8a96e5e72e01cfe69b9c02d
-    "vite": "^8.0.12"
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.13.0",
+    "vite": "^6.0.5",
+    "tailwindcss": "^3.4.17",
+    "@tailwindcss/postcss": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1"
   }
 }

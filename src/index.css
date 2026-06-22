@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "tailwindcss";
 
 @layer base {
@@ -9,7 +8,7 @@
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 }
-=======
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -121,4 +120,3 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
->>>>>>> a2d606ea941bab07c8a96e5e72e01cfe69b9c02d
